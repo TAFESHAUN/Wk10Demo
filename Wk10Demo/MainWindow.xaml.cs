@@ -16,9 +16,34 @@ namespace Wk10Demo
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<DummyData> dummyData = new List<DummyData>();
         public MainWindow()
         {
             InitializeComponent();
+            SendList();
+            demoDG.ItemsSource= dummyData;
         }
+
+        public void SendList()
+        {
+            for (int i = 0; i < 100; i++)
+            {
+                var temp = new DummyData();
+                temp.ID = i;
+                temp.FirstName = $"firstName:{i}";
+                temp.LastName = $"lastName:{i}";
+                temp.SomethingCool = $"{i * 22}";
+                dummyData.Add(temp);
+            }
+        }
+    }
+
+    public class DummyData
+    {
+        public int ID { get; set; }
+        public string? FirstName { get; set; }
+        public string? LastName { get; set; }
+
+        public string? SomethingCool {  get; set; }
     }
 }

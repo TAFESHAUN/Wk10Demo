@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Wk10Demo"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="600" Width="1200">
     <Grid>
         <Grid x:Name="MainLayoutGrid" >
             <Grid.RowDefinitions>
@@ -25,16 +25,19 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Rectangle Stroke="Black" Fill="Navy" Grid.ColumnSpan="6"/>
-            <Rectangle Grid.ColumnSpan="6" Grid.Row="5" Stroke="Black">
-                <Rectangle.Fill>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#FF00FFCD"/>
-                        <GradientStop Color="#FFE000FF" Offset="1"/>
-                    </LinearGradientBrush>
-                </Rectangle.Fill>
-            </Rectangle>
+            <Rectangle Grid.ColumnSpan="6" Grid.Row="5" Stroke="Black" Fill="Navy"/>
             <Label Content="Wk 10 WPF Demo" HorizontalAlignment="Center" Margin="0,14,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Foreground="White" FontFamily="Ink Free" FontSize="24" FontWeight="Bold" Grid.Column="2"/>
             <Label Content="Wk 10 demo footer 2026" Grid.ColumnSpan="6" Foreground="White" FontFamily="Ink Free" FontSize="24" FontWeight="Bold" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <Label x:Name="lblPrompt" Content="Enter your name:" HorizontalAlignment="Left" Margin="59,33,0,0" Grid.Row="1" VerticalAlignment="Top" Grid.ColumnSpan="2" FontSize="16" FontFamily="Ink Free"/>
+            <TextBox Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="59,10,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontFamily="Ink Free" FontSize="16"/>
+            <Button x:Name="btnHello" Grid.Column="5" Content="Say Hello" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" Height="53" Width="113" FontSize="16" FontFamily="Ink Free" Background="Navy" Foreground="White" FontWeight="Bold"/>
+            <CheckBox Grid.Column="1" Content="CheckBox" HorizontalAlignment="Left" Margin="71,36,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+            <RadioButton Grid.Column="1" Content="RadioButton" HorizontalAlignment="Center" Margin="0,48,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+            <DataGrid x:Name="demoDG" Grid.Column="2" Grid.ColumnSpan="4" Margin="10,10,10,10" AutoGenerateColumns="True" Grid.RowSpan="3" Grid.Row="1" FontSize="24" FontFamily="Ink Free">
+                <DataGrid.CellStyle>
+                    <Style/>
+                </DataGrid.CellStyle>
+            </DataGrid>
         </Grid>
     </Grid>
 </Window>
