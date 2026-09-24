@@ -33,10 +33,7 @@
             <Button x:Name="btnHello" Grid.Column="5" Content="Say Hello" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" Height="53" Width="113" FontSize="16" FontFamily="Ink Free" Background="Navy" Foreground="White" FontWeight="Bold"/>
             <CheckBox Grid.Column="1" Content="CheckBox" HorizontalAlignment="Left" Margin="71,36,0,0" Grid.Row="1" VerticalAlignment="Top"/>
             <RadioButton Grid.Column="1" Content="RadioButton" HorizontalAlignment="Center" Margin="0,48,0,0" Grid.Row="2" VerticalAlignment="Top"/>
-            <DataGrid x:Name="demoDG" Grid.Column="2" Grid.ColumnSpan="4" Margin="10,10,10,10" AutoGenerateColumns="True" Grid.RowSpan="3" Grid.Row="1" FontSize="24" FontFamily="Ink Free">
-                <DataGrid.CellStyle>
-                    <Style/>
-                </DataGrid.CellStyle>
+            <DataGrid x:Name="demoDG" Grid.Column="2" Grid.ColumnSpan="4" Margin="10,10,10,10" AutoGenerateColumns="True" Grid.RowSpan="3" Grid.Row="1" FontSize="24" FontFamily="Ink Free" ColumnWidth="*">
             </DataGrid>
         </Grid>
     </Grid>
