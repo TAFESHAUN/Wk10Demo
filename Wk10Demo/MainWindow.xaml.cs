@@ -36,6 +36,21 @@ namespace Wk10Demo
                 dummyData.Add(temp);
             }
         }
+
+        private void Hello_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Hello World!");
+        }
+
+        private void EnterDemo(object sender, MouseEventArgs e)
+        {
+            btnHello.Content = "HELLO!";
+        }
+
+        private void LeaveDemo(object sender, MouseEventArgs e)
+        {
+            btnHello.Content = "Oh you Left...";
+        }
     }
 
     public class DummyData
